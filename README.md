@@ -48,7 +48,8 @@ admin.site.register(Employee,EmployeeAdmin)
 ```
 ## OUTPUT:
 
-![django](https://user-images.githubusercontent.com/118916413/230156828-7d0aebf3-ac52-4a87-8f7c-9a5d3de5f9ca.png)
+![django01](https://user-images.githubusercontent.com/118916413/230281335-b1cd8cbc-7bbe-4c4a-8959-9abb067a7003.png)
+
 
 ## RESULT:
 
