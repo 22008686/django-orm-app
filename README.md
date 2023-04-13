@@ -28,27 +28,34 @@ MODELS.PY:
 ```
 from django.db import models
 from django.contrib import admin
+
+
 # Create your models here.
-class Employee (models.Model):
-    emp_id=models.CharField(primary_key=True,max_length=4,help_text='Employee ID')
-    ename=models.CharField(max_length=50)
-    post=models.CharField(max_length=20)
-    salary=models.IntegerField()
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('emp_id','ename','post','salary')
+class Student (models.Model):
+    referencenumber=models.CharField(max_length=20,help_text="reference number")
+    name=models.CharField(max_length=100)
+    age=models.IntegerField()
+    email=models.EmailField()
+
+
+class StudentAdmin(admin.ModelAdmin):
+    list_display=('referencenumber','name','age','email')
 ```
     
 ADMIN.PY:
 ```
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-# Register your models here.
+from .models import Student,StudentAdmin
 
-admin.site.register(Employee,EmployeeAdmin)
+
+# Register your models here.
+admin.site.register(Student,StudentAdmin)
+
 ```
 ## OUTPUT:
 
-![django01](https://user-images.githubusercontent.com/118916413/230281335-b1cd8cbc-7bbe-4c4a-8959-9abb067a7003.png)
+![orm](https://user-images.githubusercontent.com/118916413/231650246-682173ac-1c6a-41da-8e5b-056568202413.png)
+
 
 
 ## RESULT:
